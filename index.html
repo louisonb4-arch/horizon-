@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Horizon par alaïa café — coffee shop et cave à café à Nantes</title>
+<meta name="description" content="Coffee shop et cave à café, 38 rue Léon Jamin à Nantes. Six cafés au comptoir, une trentaine de références à emporter, trois ateliers. Du mardi au samedi, sans réservation.">
+<meta name="theme-color" content="#20325A">
+<meta name="author" content="Horizon par alaïa café">
+<link rel="canonical" href="https://example.invalid/">
+<!-- ⚠ canonical, og:url et sitemap.xml : à remplacer par le vrai domaine. Voir LEGAL-TODO.md -->
+
+<meta property="og:type" content="business.business">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Horizon par alaïa café">
+<meta property="og:title" content="Horizon par alaïa café — coffee shop et cave à café à Nantes">
+<meta property="og:description" content="Six cafés au comptoir, une trentaine à emporter. 38 rue Léon Jamin, Nantes. Du mardi au samedi, sans réservation.">
+<meta property="og:image" content="https://example.invalid/assets/img/comptoir-marzocco.jpg">
+<meta property="og:image:alt" content="Le comptoir d’Horizon : la machine à espresso, le néon plié en boucles et le plafond bleu nuit.">
+<meta property="og:url" content="https://example.invalid/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/icone-180.png">
+
+<link rel="preload" href="assets/font/gluten-400-900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/font/schibsted-400-900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/horizon.css">
+
+<script>
+  /* Le mouvement n'existe que si le script vit. Deux filets : la classe est
+     posée avant le premier rendu, et retirée si le fichier ne répond pas. */
+  document.documentElement.classList.add('js');
+  setTimeout(function () {
+    if (!window.__horizon) document.documentElement.classList.remove('js');
+  }, 2600);
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Horizon par alaïa café",
+  "legalName": "AEFC HORIZON",
+  "description": "Coffee shop et cave à café ouvert en septembre 2023 par Adeline et Florian, dans une ancienne galerie d’art de la rue Léon-Jamin à Nantes. Six cafés au comptoir, une trentaine de références à emporter, et trois ateliers.",
+  "url": "https://example.invalid/",
+  "image": "https://example.invalid/assets/img/comptoir-marzocco.jpg",
+  "foundingDate": "2023-09-15",
+  "vatID": "FR60979008794",
+  "taxID": "97900879400013",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "38 rue Léon Jamin",
+    "postalCode": "44000",
+    "addressLocality": "Nantes",
+    "addressCountry": "FR"
+  },
+  "areaServed": "Nantes",
+  "servesCuisine": ["Café de spécialité", "Pâtisserie", "Snacks"],
+  "acceptsReservations": "False",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Alaïa café & boutique",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4 rue de Budapest",
+      "postalCode": "44000",
+      "addressLocality": "Nantes",
+      "addressCountry": "FR"
+    }
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "09:30", "closes": "18:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "11:00", "closes": "18:30" }
+  ],
+  "sameAs": ["https://www.instagram.com/horizoncafe.nantes/"]
+}
+</script>
+</head>
+
+<body>
+<a class="saut" href="#contenu">Aller au contenu</a>
+
+<!-- ═══ Les découpes : la ligne du plafond, réutilisée pour couper les images ═══ -->
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <defs>
+    <clipPath id="coupe-vague" clipPathUnits="objectBoundingBox">
+      <path d="M0,0.07C0.0208,0.0759 0.0833,0.097 0.125,0.1054C0.1667,0.1137 0.2083,0.12 0.25,0.12C0.2917,0.12 0.3333,0.1137 0.375,0.1054C0.4167,0.097 0.4583,0.0818 0.5,0.07C0.5417,0.0582 0.5833,0.043 0.625,0.0346C0.6667,0.0263 0.7083,0.02 0.75,0.02C0.7917,0.02 0.8333,0.0263 0.875,0.0346C0.9167,0.043 0.9792,0.0641 1,0.07L1,1L0,1Z"/>
+    </clipPath>
+    <clipPath id="coupe-creux" clipPathUnits="objectBoundingBox">
+      <path d="M0,0.065C0.0208,0.0597 0.0833,0.0407 0.125,0.0332C0.1667,0.0257 0.2083,0.02 0.25,0.02C0.2917,0.02 0.3333,0.0257 0.375,0.0332C0.4167,0.0407 0.4583,0.0544 0.5,0.065C0.5417,0.0756 0.5833,0.0893 0.625,0.0968C0.6667,0.1043 0.7083,0.11 0.75,0.11C0.7917,0.11 0.8333,0.1043 0.875,0.0968C0.9167,0.0893 0.9792,0.0703 1,0.065L1,1L0,1Z"/>
+    </clipPath>
+  </defs>
+</svg>
+
+<!-- ═══ ENSEIGNE ═══════════════════════════════════════════════════════════ -->
+<header class="enseigne">
+  <div class="enseigne__page page">
+    <a class="enseigne__logo" href="/" aria-label="Horizon par alaïa café — accueil">
+      <i class="marque" role="img" aria-hidden="true"></i>
+    </a>
+
+    <nav class="enseigne__liens" aria-label="Navigation principale">
+      <a class="enseigne__lien" href="#lieu"     data-section="lieu">Le lieu</a>
+      <a class="enseigne__lien" href="#comptoir" data-section="comptoir">Le comptoir</a>
+      <a class="enseigne__lien" href="#cave"     data-section="cave">La cave</a>
+      <a class="enseigne__lien" href="ateliers.html">Les ateliers</a>
+      <a class="enseigne__lien" href="#trouver"  data-section="trouver">Nous trouver</a>
+    </nav>
+    <a class="ovale enseigne__cta" href="carte.html">La carte</a>
+
+    <button class="tirette" type="button" aria-expanded="false" aria-controls="tiroir" aria-label="Ouvrir le menu">
+      <svg width="26" height="16" viewBox="0 0 26 16" fill="none" aria-hidden="true">
+        <path class="tirette__t tirette__h" d="M1 3h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path class="tirette__t tirette__b" d="M1 13h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<div class="tiroir" id="tiroir" data-ouvert="non" aria-hidden="true">
+  <a class="tiroir__lien" href="#lieu">Le lieu <span>01</span></a>
+  <a class="tiroir__lien" href="#comptoir">Le comptoir <span>02</span></a>
+  <a class="tiroir__lien" href="#cave">La cave <span>03</span></a>
+  <a class="tiroir__lien" href="ateliers.html">Les ateliers <span>04</span></a>
+  <a class="tiroir__lien" href="#table">À table <span>05</span></a>
+  <a class="tiroir__lien" href="#trouver">Nous trouver <span>07</span></a>
+  <a class="tiroir__lien" href="carte.html">La carte <span>→</span></a>
+  <div class="tiroir__pied">
+    <p class="mono">Mardi → vendredi · 9:30 → 18:30<br>Samedi · 11:00 → 18:30<br>Dimanche et lundi · fermé</p>
+  </div>
+</div>
+
+<main id="contenu">
+
+<!-- ═══ HERO — le ciel, la ligne, la salle ════════════════════════════════ -->
+<section class="hero" aria-labelledby="t-hero">
+
+  <svg class="hero__neon boucle trace" viewBox="0 0 300 145" fill="none" aria-hidden="true">
+    <path d="M49.7,12C46.7,12.9 37,13.9 31.7,17.2C26.4,20.6 21.3,26 18,32.1C14.7,38.2 12.4,46.1 12.1,53.9C11.8,61.7 13,70.8 16.1,79C19.2,87.2 24.3,95.9 30.6,103C36.9,110.1 45.3,116.9 54.2,121.7C63,126.6 73.6,130.3 83.9,132C94.2,133.7 105.5,133.7 115.8,132C126.1,130.3 136.7,126.6 145.5,121.7C154.4,116.9 162.8,110.1 169.1,103C175.4,95.9 180.5,87.2 183.6,79C186.7,70.8 187.9,61.7 187.6,53.9C187.3,46.1 185,38.2 181.7,32.1C178.4,26 173.3,20.6 168,17.2C162.7,13.9 156,12 150,12C144,12 137.3,13.9 132,17.2C126.7,20.6 121.6,26 118.3,32.1C115,38.2 112.7,46.1 112.4,53.9C112.1,61.7 113.3,70.8 116.4,79C119.5,87.2 124.6,95.9 130.9,103C137.2,110.1 145.6,116.9 154.5,121.7C163.3,126.6 173.9,130.3 184.2,132C194.5,133.7 205.8,133.7 216.1,132C226.4,130.3 237,126.6 245.8,121.7C254.7,116.9 263.1,110.1 269.4,103C275.7,95.9 280.8,87.2 283.9,79C287,70.8 288.2,61.7 287.9,53.9C287.6,46.1 285.3,38.2 282,32.1C278.7,26 273.6,20.6 268.3,17.2C263,13.9 253.3,12.9 250.3,12"/>
+  </svg>
+
+  <div class="hero__ciel page">
+    <p class="hero__mono leve">
+      <span>Nantes</span><span>38 rue Léon Jamin</span><span>Depuis septembre 2023</span>
+    </p>
+
+    <h1 class="hero__titre" id="t-hero">
+      <img class="hero__wordmark leve" src="assets/img/logo-rose.svg"
+           width="337" height="112" alt="Horizon par alaïa café" fetchpriority="high">
+      <span class="hero__phrase leve" style="--retard:1">
+        D’un côté <b>le comptoir</b>.<br>De l’autre, <b>la cave</b>.
+      </span>
+    </h1>
+
+    <div class="hero__bas">
+      <p class="hero__chapeau leve" style="--retard:2">
+        Six cafés tournent à l’ardoise, tirés en espresso, en cortado ou en filtre.
+        Une <b>trentaine d’autres</b> attendent sur l’étagère, à emporter chez vous.
+        Entre les deux, il y a un comptoir et quelqu’un pour vous dire lequel prendre.
+      </p>
+      <p class="hero__actions leve" style="--retard:3">
+        <a class="ovale ovale--plein" href="carte.html">Voir la carte</a>
+        <a class="ovale" href="ateliers.html">Les ateliers</a>
+      </p>
+    </div>
+  </div>
+
+  <figure class="hero__salle photo revele">
+    <img src="assets/img/boutique-etageres.jpg" width="1440" height="1920"
+         alt="La boutique d’Horizon : les étagères ondulées chargées de cannettes et de sachets de café, la découpe en vague du plafond, et au fond les tables hautes devant la vitrine."
+         fetchpriority="high" decoding="async">
+  </figure>
+
+  <div class="hero__sol">
+    <dl class="page">
+      <div class="hero__fait"><dt>Mardi → vendredi</dt><dd>9:30 → 18:30</dd></div>
+      <div class="hero__fait"><dt>Samedi</dt><dd>11:00 → 18:30</dd></div>
+      <div class="hero__fait"><dt>Dimanche &amp; lundi</dt><dd>Fermé</dd></div>
+      <div class="hero__fait"><dt>Réservation</dt><dd>Aucune</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ═══ 01 — LE LIEU ══════════════════════════════════════════════════════ -->
+<section class="bloc bloc--creme" id="lieu" aria-labelledby="t-lieu">
+  <div class="page">
+    <p class="rail"><em>N° 01</em> <span>Le lieu</span> <span class="rail__titre">Ancienne galerie d’art</span></p>
+
+    <div class="lieu">
+      <div class="lieu__haut">
+        <div>
+          <h2 class="titre leve" id="t-lieu">La rue porte le nom <em>d’un peintre.</em></h2>
+          <div class="texte lieu__texte leve" style="--retard:1">
+            <p>
+              Léon Jamin était un peintre belge, mort en 1944 ; la rue s’appelle comme lui depuis
+              1922. Horizon a ouvert en septembre 2023 dans une <strong>ancienne galerie
+              d’art</strong> de cette rue-là. Personne n’avait prévu la rime.
+            </p>
+            <p>
+              Il en reste les volumes : un plafond haut, peint en bleu nuit, qu’une découpe blanche
+              traverse en vague ; un tube de néon plié en deux boucles ; des étagères courbes le long
+              du mur crème ; une vitrine large qui prend les arbres du trottoir toute la matinée.
+              On a gardé les murs, on a changé ce qu’on accroche dessus.
+            </p>
+          </div>
+
+          <ul class="faits leve" style="--retard:2">
+            <li>
+              <span class="faits__quoi">Ouvert</span>
+              <span class="faits__points"></span>
+              <span class="faits__val">Septembre 2023</span>
+            </li>
+            <li>
+              <span class="faits__quoi">Par</span>
+              <span class="faits__points"></span>
+              <span class="faits__val">Adeline et Florian, déjà à l’origine d’Alaïa</span>
+            </li>
+            <li>
+              <span class="faits__quoi">Avant</span>
+              <span class="faits__points"></span>
+              <span class="faits__val">Une galerie d’art</span>
+            </li>
+            <li>
+              <span class="faits__quoi">Autour</span>
+              <span class="faits__points"></span>
+              <span class="faits__val">Entre la rue Edmond-Prieur et la place Saint-Similien</span>
+            </li>
+          </ul>
+        </div>
+
+        <figure class="photo photo--creux revele">
+          <img src="assets/img/salle-plantes.jpg" width="1440" height="1920" loading="lazy" decoding="async"
+               alt="La salle d’Horizon vue à travers les feuilles d’un pothos : la machine La Marzocco sur le comptoir crème, les étagères, un cadre au mur et le néon lumineux au plafond.">
+          <figcaption class="legende"><b>Fig. 01</b> La salle, depuis l’entrée.</figcaption>
+        </figure>
+      </div>
+
+      <div class="lieu__bande">
+        <figure class="photo photo--vague revele">
+          <img src="assets/img/boutique-etageres.jpg" width="1440" height="1920" loading="lazy" decoding="async"
+               alt="Les étagères ondulées de la boutique, chargées de boîtes et de cannettes de café, sous la découpe en vague du plafond ; au fond, les tables et la vitrine.">
+          <figcaption class="legende"><b>Fig. 02</b> L’étagère suit la ligne du plafond.</figcaption>
+        </figure>
+        <figure class="photo photo--vague revele">
+          <img src="assets/img/tins-illustres.jpg" width="1440" height="1447" loading="lazy" decoding="async"
+               alt="Des boîtes de café illustrées, empilées sur une étagère blanche, chacune avec son étiquette d’origine.">
+          <figcaption class="legende"><b>Fig. 03</b> Les boîtes, une origine par étiquette.</figcaption>
+        </figure>
+        <figure class="photo photo--vague revele">
+          <img src="assets/img/cappuccino-fenetre.jpg" width="1440" height="1920" loading="lazy" decoding="async"
+               alt="Un cappuccino au latte art en forme de feuille, dans une tasse noire mouchetée, posé sur le rebord blanc de la fenêtre.">
+          <figcaption class="legende"><b>Fig. 04</b> Le rebord de fenêtre, place assise.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ~ la ligne passe : crème → nuit ~ -->
+<div class="bord" data-de="creme" data-vers="nuit" aria-hidden="true">
+  <svg class="vague" viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path d="M0,40C20,41.9 80,48.8 120,51.3C160,53.7 200,55.4 240,54.9C280,54.4 320,51.5 360,48.4C400,45.3 440,39.9 480,36.3C520,32.6 560,28.3 600,26.6C640,24.9 680,24.7 720,26.1C760,27.4 800,31.4 840,34.9C880,38.4 920,43.9 960,47.2C1000,50.5 1040,53.8 1080,54.6C1120,55.5 1180,52.6 1200,52.1L1200,80L0,80Z"/>
+  </svg>
+  <svg class="trait trace" viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path d="M0,40C20,41.9 80,48.8 120,51.3C160,53.7 200,55.4 240,54.9C280,54.4 320,51.5 360,48.4C400,45.3 440,39.9 480,36.3C520,32.6 560,28.3 600,26.6C640,24.9 680,24.7 720,26.1C760,27.4 800,31.4 840,34.9C880,38.4 920,43.9 960,47.2C1000,50.5 1040,53.8 1080,54.6C1120,55.5 1180,52.6 1200,52.1"/>
+  </svg>
+</div>
+
+<!-- ═══ 02 — LE COMPTOIR ══════════════════════════════════════════════════ -->
+<section class="bloc bloc--nuit" id="comptoir" aria-labelledby="t-comptoir">
+  <div class="page">
+    <p class="rail"><em>N° 02</em> <span>Le comptoir</span> <span class="rail__titre">Six cafés, ça tourne</span></p>
+
+    <div class="comptoir__intro">
+      <h2 class="titre leve" id="t-comptoir">Six à l’ardoise, <em>et ça change.</em></h2>
+      <div class="texte leve" style="--retard:1">
+        <p>
+          La sélection au comptoir tient sur un tableau de lettres en bois : six cafés à un
+          moment donné, pas les mêmes le mois suivant. On les tire en <strong>espresso</strong>,
+          en <strong>cortado</strong> ou en <strong>filtre</strong>. Le lait végétal se demande
+          sans hausser le ton.
+        </p>
+        <p>
+          Les <strong>méthodes douces</strong> passent en V60, en Chemex ou en Aeropress. C’est
+          plus long — quatre minutes environ, le temps que l’eau descende — et c’est là qu’on
+          entend le mieux ce qu’un grain a à dire. Si vous ne savez pas lequel choisir, dites
+          juste ce que vous buvez d’habitude : ça suffit pour vous orienter.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="rangee" role="group" aria-label="Le comptoir en images">
+    <figure class="photo photo--vague revele">
+      <img src="assets/img/mouture.jpg" width="1440" height="1795" loading="lazy" decoding="async"
+           alt="Le moulin distribue la mouture dans le porte-filtre posé sur la balance, dans la lumière serrée du comptoir.">
+      <figcaption class="legende"><b>01</b> La mouture tombe dans le porte-filtre.</figcaption>
+    </figure>
+    <figure class="photo photo--vague revele">
+      <img src="assets/img/trois-v60.jpg" width="1440" height="1716" loading="lazy" decoding="async"
+           alt="Un barista en chemise à carreaux verse l’eau en filet sur trois V60 alignés sur leurs balances.">
+      <figcaption class="legende"><b>02</b> Trois filtres en même temps.</figcaption>
+    </figure>
+    <figure class="photo photo--vague revele">
+      <img src="assets/img/barista-tableau.jpg" width="1440" height="1919" loading="lazy" decoding="async"
+           alt="Un barista en casquette, devant le tableau de lettres en bois qui liste mocaccino, filtre du jour, cold brew, matcha et chocolat chaud.">
+      <figcaption class="legende"><b>03</b> Le tableau de lettres, seule carte des boissons.</figcaption>
+    </figure>
+    <figure class="photo photo--vague revele">
+      <img src="assets/img/barista-latte.jpg" width="1440" height="1919" loading="lazy" decoding="async"
+           alt="Un barista termine le dessin sur un latte, le pichet à lait dans une main, la tasse dans l’autre.">
+      <figcaption class="legende"><b>04</b> Le dessin se pose en dernier.</figcaption>
+    </figure>
+    <figure class="photo photo--vague revele">
+      <img src="assets/img/tasse-plateau.jpg" width="1440" height="1795" loading="lazy" decoding="async"
+           alt="Une main tient une petite tasse en grès mouchetée, posée sur un plateau en noyer avec une cuillère.">
+      <figcaption class="legende"><b>05</b> Le grès, la cuillère, le plateau.</figcaption>
+    </figure>
+    <figure class="photo photo--vague revele">
+      <img src="assets/img/barista-v60.jpg" width="1365" height="1706" loading="lazy" decoding="async"
+           alt="Un barista souriant prépare un V60 derrière le comptoir, la bouilloire et les carafes en verre devant lui.">
+      <figcaption class="legende"><b>06</b> Quatre minutes, environ.</figcaption>
+    </figure>
+  </div>
+
+  <div class="page">
+    <p class="tirer" aria-hidden="true">
+      <svg width="24" height="8" viewBox="0 0 24 8" fill="none">
+        <path d="M0 4h21M18 1l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Faites glisser
+    </p>
+  </div>
+</section>
+
+<!-- ~ la ligne passe : nuit → crème ~ -->
+<div class="bord" data-de="nuit" data-vers="creme" aria-hidden="true">
+  <svg class="vague" viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path d="M0,40C20,38.4 80,32.4 120,30.2C160,28.1 200,26.7 240,27.1C280,27.5 320,30 360,32.7C400,35.4 440,40.1 480,43.2C520,46.4 560,50.1 600,51.6C640,53.1 680,53.3 720,52.1C760,50.9 800,47.5 840,44.4C880,41.3 920,36.6 960,33.7C1000,30.9 1040,28 1080,27.3C1120,26.6 1180,29.1 1200,29.5L1200,80L0,80Z"/>
+  </svg>
+  <svg class="trait trace" viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path d="M0,40C20,38.4 80,32.4 120,30.2C160,28.1 200,26.7 240,27.1C280,27.5 320,30 360,32.7C400,35.4 440,40.1 480,43.2C520,46.4 560,50.1 600,51.6C640,53.1 680,53.3 720,52.1C760,50.9 800,47.5 840,44.4C880,41.3 920,36.6 960,33.7C1000,30.9 1040,28 1080,27.3C1120,26.6 1180,29.1 1200,29.5"/>
+  </svg>
+</div>
+
+<!-- ═══ 03 — LA CAVE ══════════════════════════════════════════════════════ -->
+<section class="bloc bloc--creme" id="cave" aria-labelledby="t-cave">
+  <div class="page">
+    <p class="rail"><em>N° 03</em> <span>La cave</span> <span class="rail__titre">Une trentaine de références</span></p>
+
+    <div class="cave">
+      <div>
+        <h2 class="titre leve" id="t-cave">On peut goûter <em>avant d’acheter.</em></h2>
+        <div class="texte leve" style="--retard:1">
+          <p>
+            C’est la moitié d’Horizon qu’on ne trouve pas ailleurs : une étagère d’environ
+            <strong>trente références</strong>, en paquets, en boîtes et en cannettes,
+            torréfiées par des maisons françaises et européennes. Colombie, Costa Rica,
+            Éthiopie, Kenya, et d’autres selon les arrivages.
+          </p>
+          <p>
+            Une cave à café n’a d’intérêt que si quelqu’un vous ouvre les bouteilles. Ce qui
+            passe au comptoir vient de cette étagère : vous buvez d’abord, vous repartez avec
+            le paquet ensuite. Et le matériel pour le refaire chez vous est sur la même
+            étagère — filtres, carafes, moulins.
+          </p>
+        </div>
+
+        <ul class="torrefacteurs leve" style="--retard:2">
+          <li>POMA <span class="torrefacteurs__ou">Research collection</span></li>
+          <li>mazelab <span class="torrefacteurs__ou">Prague</span></li>
+          <li>Hydrangea Coffee Roasters <span class="torrefacteurs__ou">États-Unis</span></li>
+          <li>La Cabra <span class="torrefacteurs__ou">Danemark</span></li>
+          <li>Kawa <span class="torrefacteurs__ou">Paris</span></li>
+          <li>People Possession <span class="torrefacteurs__ou">En cannette</span></li>
+        </ul>
+        <p class="legende">
+          <b>Note</b> Maisons relevées au comptoir en juillet 2026 et dans la presse locale.
+          La sélection tourne : la liste du jour est sur l’étagère, pas ici.
+        </p>
+      </div>
+
+      <div class="leve" style="--retard:1">
+       <div class="etagere">
+        <figure class="photo revele">
+          <img src="assets/img/poma-packshot.jpg" width="1440" height="1795" loading="lazy" decoding="async"
+               alt="Deux coffrets POMA noirs, étiquetés Volcán Azul SL28, posés côte à côte contre un mur clair.">
+        </figure>
+        <figure class="photo revele">
+          <img src="assets/img/mazelab-grille.jpg" width="1440" height="1920" loading="lazy" decoding="async"
+               alt="Des coffrets mazelab en carton gaufré, chacun portant une étiquette de couleur : Mukurweini Kenya SL28, El Socorro Guatemala, Muntasha Éthiopie.">
+        </figure>
+        <figure class="photo revele">
+          <img src="assets/img/hydrangea-grille.jpg" width="1440" height="1920" loading="lazy" decoding="async"
+               alt="Des sachets Hydrangea Coffee Roasters roses et bleus, illustrés de fruits peints, alignés en grille.">
+        </figure>
+       </div>
+        <p class="legende etagere__mot"><b>Fig. 05</b> Trois maisons, trois façons d’emballer un grain.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="rangee" role="group" aria-label="La cave en images">
+    <figure class="photo photo--creux revele">
+      <img src="assets/img/canettes.jpg" width="1365" height="1820" loading="lazy" decoding="async"
+           alt="Des cannettes de café en grains, aux étiquettes graphiques, rassemblées dans un rai de lumière.">
+      <figcaption class="legende"><b>07</b> Le café en cannette, 200 g.</figcaption>
+    </figure>
+    <figure class="photo photo--creux revele">
+      <img src="assets/img/mazelab-lumiere.jpg" width="1440" height="1919" loading="lazy" decoding="async"
+           alt="Une tasse de café filtre posée sur une pile de coffrets mazelab, dans une lumière rasante de fin de journée.">
+      <figcaption class="legende"><b>08</b> Ce qui est sur l’étagère passe au comptoir.</figcaption>
+    </figure>
+    <figure class="photo photo--creux revele">
+      <img src="assets/img/hydrangea-carafes.jpg" width="1440" height="1920" loading="lazy" decoding="async"
+           alt="Des sachets Hydrangea pastel alignés derrière deux carafes en verre remplies de café filtre.">
+      <figcaption class="legende"><b>09</b> On ouvre, on sert, on compare.</figcaption>
+    </figure>
+    <figure class="photo photo--creux revele">
+      <img src="assets/img/poma-carafe.jpg" width="1440" height="1795" loading="lazy" decoding="async"
+           alt="Vue de dessus : quatre coffrets POMA autour d’une carafe en verre remplie de café ambré, sur un plan de travail en terrazzo.">
+      <figcaption class="legende"><b>10</b> Le terrazzo du comptoir.</figcaption>
+    </figure>
+    <figure class="photo photo--creux revele">
+      <img src="assets/img/panier-velo.jpg" width="1440" height="1920" loading="lazy" decoding="async"
+           alt="Un panier de vélo orange rempli de cannettes de café, garé devant la boutique.">
+      <figcaption class="legende"><b>11</b> Le format qui rentre dans un panier.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ~ la ligne passe : crème → nuit ~ -->
+<div class="bord" data-de="creme" data-vers="nuit" aria-hidden="true">
+  <svg class="vague" viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path d="M0,40C20,41.9 80,48.8 120,51.3C160,53.7 200,55.4 240,54.9C280,54.4 320,51.5 360,48.4C400,45.3 440,39.9 480,36.3C520,32.6 560,28.3 600,26.6C640,24.9 680,24.7 720,26.1C760,27.4 800,31.4 840,34.9C880,38.4 920,43.9 960,47.2C1000,50.5 1040,53.8 1080,54.6C1120,55.5 1180,52.6 1200,52.1L1200,80L0,80Z"/>
+  </svg>
+  <svg class="trait trace" viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path d="M0,40C20,41.9 80,48.8 120,51.3C160,53.7 200,55.4 240,54.9C280,54.4 320,51.5 360,48.4C400,45.3 440,39.9 480,36.3C520,32.6 560,28.3 600,26.6C640,24.9 680,24.7 720,26.1C760,27.4 800,31.4 840,34.9C880,38.4 920,43.9 960,47.2C1000,50.5 1040,53.8 1080,54.6C1120,55.5 1180,52.6 1200,52.1"/>
+  </svg>
+</div>
+
+<!-- ═══ 04 — LES ATELIERS ═════════════════════════════════════════════════ -->
+<section class="bloc bloc--nuit" id="ateliers" aria-labelledby="t-ateliers">
+  <div class="page">
+    <p class="rail"><em>N° 04</em> <span>Les ateliers</span> <span class="rail__titre">Trois façons d’apprendre</span></p>
+
+    <div class="comptoir__intro" style="margin-bottom:clamp(30px,3.6vw,52px)">
+      <h2 class="titre leve" id="t-ateliers">On vous montre, <em>vous le referez.</em></h2>
+      <p class="chapeau leve" style="--retard:1">
+        Acheter un bon grain et le rater chez soi, c’est le scénario courant. Trois ateliers
+        pour qu’il n’arrive pas.
+      </p>
+    </div>
+
+    <ol class="ateliers">
+      <li class="atelier leve">
+        <p class="atelier__num">01</p>
+        <div class="atelier__corps">
+          <h3 class="atelier__titre">Initiation aux<br>méthodes douces</h3>
+          <p>
+            Le matériel, ce qu’il fait, et pourquoi le même café ne donne pas la même tasse en
+            V60, en Chemex ou en Aeropress. Mouture, température, débit : on manipule, on goûte
+            l’écart, on recommence.
+          </p>
+          <p class="atelier__specs">
+            <span>Durée <span class="manque">[à fournir]</span></span>
+            <span>Tarif <span class="manque">[à fournir]</span></span>
+          </p>
+        </div>
+        <figure class="atelier__photo photo photo--vague revele">
+          <img src="assets/img/trois-v60.jpg" width="1440" height="1716" loading="lazy" decoding="async"
+               alt="Trois V60 posés sur leurs balances, un barista versant l’eau en filet sur le premier.">
+        </figure>
+      </li>
+
+      <li class="atelier leve">
+        <p class="atelier__num">02</p>
+        <div class="atelier__corps">
+          <h3 class="atelier__titre">Analyse<br>sensorielle</h3>
+          <p>
+            Reconnaître les arômes et apprendre à noter un café. Ce qu’on appelle l’acidité,
+            le corps, la longueur — et comment mettre des mots dessus sans réciter une fiche.
+            À la fin, vous savez lire une étiquette et savoir si elle est pour vous.
+          </p>
+          <p class="atelier__specs">
+            <span>Durée <span class="manque">[à fournir]</span></span>
+            <span>Tarif <span class="manque">[à fournir]</span></span>
+          </p>
+        </div>
+        <figure class="atelier__photo photo photo--vague revele">
+          <img src="assets/img/mazelab-lumiere.jpg" width="1440" height="1919" loading="lazy" decoding="async"
+               alt="Une tasse de café filtre sur une pile de coffrets mazelab dont les étiquettes annoncent les notes de dégustation.">
+        </figure>
+      </li>
+
+      <li class="atelier leve">
+        <p class="atelier__num">03</p>
+        <div class="atelier__corps">
+          <h3 class="atelier__titre">Latte<br>art</h3>
+          <p>
+            Faire mousser le lait comme il faut, puis poser un cœur. La partie visible est la
+            dernière : l’essentiel se joue dans le pichet, avant même de verser.
+          </p>
+          <p class="atelier__specs">
+            <span>Durée <span class="manque">[à fournir]</span></span>
+            <span>Tarif <span class="manque">[à fournir]</span></span>
+          </p>
+        </div>
+        <figure class="atelier__photo photo photo--vague revele">
+          <img src="assets/img/barista-latte.jpg" width="1440" height="1919" loading="lazy" decoding="async"
+               alt="Un barista pose le dessin sur un latte, le pichet à lait incliné au-dessus de la tasse.">
+        </figure>
+      </li>
+    </ol>
+
+    <p style="margin-top:clamp(32px,3.6vw,50px)">
+      <a class="ovale ovale--plein" href="ateliers.html">Le détail des trois ateliers</a>
+    </p>
+  </div>
+</section>
+
+<!-- ~ la ligne passe : nuit → crème ~ -->
+<div class="bord" data-de="nuit" data-vers="creme" aria-hidden="true">
+  <svg class="vague" viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path d="M0,40C20,38.4 80,32.4 120,30.2C160,28.1 200,26.7 240,27.1C280,27.5 320,30 360,32.7C400,35.4 440,40.1 480,43.2C520,46.4 560,50.1 600,51.6C640,53.1 680,53.3 720,52.1C760,50.9 800,47.5 840,44.4C880,41.3 920,36.6 960,33.7C1000,30.9 1040,28 1080,27.3C1120,26.6 1180,29.1 1200,29.5L1200,80L0,80Z"/>
+  </svg>
+  <svg class="trait trace" viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path d="M0,40C20,38.4 80,32.4 120,30.2C160,28.1 200,26.7 240,27.1C280,27.5 320,30 360,32.7C400,35.4 440,40.1 480,43.2C520,46.4 560,50.1 600,51.6C640,53.1 680,53.3 720,52.1C760,50.9 800,47.5 840,44.4C880,41.3 920,36.6 960,33.7C1000,30.9 1040,28 1080,27.3C1120,26.6 1180,29.1 1200,29.5"/>
+  </svg>
+</div>
+
+<!-- ═══ 05 — À TABLE ══════════════════════════════════════════════════════ -->
+<section class="bloc bloc--creme" id="table" aria-labelledby="t-table">
+  <div class="page">
+    <p class="rail"><em>N° 05</em> <span>À table</span> <span class="rail__titre">La cuisine vient d’Alaïa</span></p>
+
+    <div class="table">
+      <div>
+        <h2 class="titre leve" id="t-table">Ça arrive de la <em>rue de Budapest.</em></h2>
+        <div class="texte leve" style="--retard:1">
+          <p>
+            Horizon n’a pas refait une cuisine : elle existait déjà, à deux kilomètres, chez
+            Alaïa. Les pâtisseries, les scones, les buns et les salades sortent de là et
+            arrivent ici. C’est la même main, dans une autre salle.
+          </p>
+          <p>
+            La vitrine change avec ce qu’il y a : un cheesecake à couper, des cakes, des
+            crèmes en coupe inox, un grilled cheese quand il est l’heure. La liste tient sur
+            une ardoise parce qu’elle bouge.
+          </p>
+        </div>
+
+        <ul class="menu-court leve" style="--retard:2">
+          <li>Pâtisseries du jour</li>
+          <li>Cookies et brownies</li>
+          <li>Cakes à la coupe</li>
+          <li>Scones</li>
+          <li>Buns</li>
+          <li>Grilled cheese</li>
+          <li>Salades</li>
+          <li>Cheesecake</li>
+        </ul>
+        <p class="legende">
+          <b>Note</b> Familles relevées dans la presse locale. Le détail du jour est à
+          l’ardoise. <a href="carte.html">Voir la carte</a>.
+        </p>
+      </div>
+
+      <div class="table__grille">
+        <figure class="photo photo--vague revele">
+          <img src="assets/img/vitrine-desserts.jpg" width="1440" height="1919" loading="lazy" decoding="async"
+               alt="La vitrine réfrigérée : des coupes inox garnies de crème, de figues rôties et d’un pétale, sous une étagère de cakes.">
+          <figcaption class="legende"><b>Fig. 05</b> La vitrine, en début de service.</figcaption>
+        </figure>
+        <figure class="photo photo--vague revele">
+          <img src="assets/img/cheesecake.jpg" width="1440" height="1919" loading="lazy" decoding="async"
+               alt="Un cheesecake au dessus brûlé, posé sur son papier, coupé en parts au couteau.">
+          <figcaption class="legende"><b>Fig. 06</b> Le cheesecake se coupe sur place.</figcaption>
+        </figure>
+        <figure class="photo photo--vague revele">
+          <img src="assets/img/geste-cerfeuil.jpg" width="1440" height="1919" loading="lazy" decoding="async"
+               alt="Deux mains effeuillent du cerfeuil au-dessus d’un bac, devant la fenêtre de la cuisine.">
+          <figcaption class="legende"><b>Fig. 07</b> Le cerfeuil s’effeuille à la main.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="rangee" role="group" aria-label="La cuisine en images">
+    <figure class="photo photo--vague revele">
+      <img src="assets/img/sandwich-comptoir.jpg" width="1440" height="1919" loading="lazy" decoding="async"
+           alt="Un bun garni de viande, de câpres et de cerfeuil, avec une petite salade, sur une assiette en grès au bout du comptoir.">
+      <figcaption class="legende"><b>12</b> Le bun, câpres et cerfeuil.</figcaption>
+    </figure>
+    <figure class="photo photo--vague revele">
+      <img src="assets/img/dessert-plateau.jpg" width="1440" height="1919" loading="lazy" decoding="async"
+           alt="Une part de gâteau au dessus caramélisé, servie avec de la crème et un pétale jaune, sur une assiette orange posée sur un plateau noir avec le ticket.">
+      <figcaption class="legende"><b>13</b> Avec le ticket, sur le plateau.</figcaption>
+    </figure>
+    <figure class="photo photo--vague revele">
+      <img src="assets/img/coupes-poche.jpg" width="1440" height="1919" loading="lazy" decoding="async"
+           alt="Une pâtissière garnit une rangée de coupes en inox à la poche à douille.">
+      <figcaption class="legende"><b>14</b> Les coupes se garnissent une à une.</figcaption>
+    </figure>
+    <figure class="photo photo--vague revele">
+      <img src="assets/img/cuisine-pain.jpg" width="1440" height="1919" loading="lazy" decoding="async"
+           alt="Le plan de cuisine : un pain au levain sur sa plaque, des tartes dorées, une pile d’assiettes et la salamandre allumée.">
+      <figcaption class="legende"><b>15</b> Le pain, les tartes, la salamandre.</figcaption>
+    </figure>
+    <figure class="photo photo--vague revele">
+      <img src="assets/img/dressage-herbes.jpg" width="1440" height="1919" loading="lazy" decoding="async"
+           alt="Une main s’apprête à saisir une assiette dressée, à côté des bacs de cerfeuil, de pousses et de câpres.">
+      <figcaption class="legende"><b>16</b> Les bacs restent à portée de main.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ~ la ligne passe : crème → nuit ~ -->
+<div class="bord" data-de="creme" data-vers="nuit" aria-hidden="true">
+  <svg class="vague" viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path d="M0,40C20,41.9 80,48.8 120,51.3C160,53.7 200,55.4 240,54.9C280,54.4 320,51.5 360,48.4C400,45.3 440,39.9 480,36.3C520,32.6 560,28.3 600,26.6C640,24.9 680,24.7 720,26.1C760,27.4 800,31.4 840,34.9C880,38.4 920,43.9 960,47.2C1000,50.5 1040,53.8 1080,54.6C1120,55.5 1180,52.6 1200,52.1L1200,80L0,80Z"/>
+  </svg>
+  <svg class="trait trace" viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path d="M0,40C20,41.9 80,48.8 120,51.3C160,53.7 200,55.4 240,54.9C280,54.4 320,51.5 360,48.4C400,45.3 440,39.9 480,36.3C520,32.6 560,28.3 600,26.6C640,24.9 680,24.7 720,26.1C760,27.4 800,31.4 840,34.9C880,38.4 920,43.9 960,47.2C1000,50.5 1040,53.8 1080,54.6C1120,55.5 1180,52.6 1200,52.1"/>
+  </svg>
+</div>
+
+<!-- ═══ 06 — LA MAISON MÈRE ═══════════════════════════════════════════════ -->
+<section class="bloc bloc--nuit" id="alaia" aria-labelledby="t-alaia">
+  <div class="page page--etroit">
+    <p class="rail"><em>N° 06</em> <span>La maison mère</span> <span class="rail__titre">4 rue de Budapest</span></p>
+
+    <div class="mere">
+      <div>
+        <h2 class="titre leve" id="t-alaia">Avant Horizon, <em>il y a eu Alaïa.</em></h2>
+        <div class="texte leve" style="--retard:1">
+          <p>
+            Adeline et Florian ouvrent Alaïa rue de Budapest en 2020 : un café, une cuisine de
+            saison, une boutique. Trois ans plus tard, ils prennent la galerie de la rue
+            Léon-Jamin pour y mettre ce qui ne tenait plus — l’étagère, les ateliers, la place
+            de s’asseoir.
+          </p>
+          <p>
+            Les deux maisons ne font pas la même chose. Chez Alaïa on déjeune ; ici on choisit
+            son grain. La cuisine, elle, passe d’une adresse à l’autre.
+          </p>
+        </div>
+      </div>
+
+      <div class="mere__carte leve" style="--retard:2">
+        <dl>
+          <div><dt>Maison</dt><dd>Alaïa café &amp; boutique</dd></div>
+          <div><dt>Adresse</dt><dd>4 rue de Budapest<br>44000 Nantes</dd></div>
+          <div><dt>Depuis</dt><dd>2020</dd></div>
+          <div><dt>Distance</dt><dd>À peu près 2 km</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ~ la ligne passe : nuit → crème ~ -->
+<div class="bord" data-de="nuit" data-vers="creme" aria-hidden="true">
+  <svg class="vague" viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path d="M0,40C20,38.4 80,32.4 120,30.2C160,28.1 200,26.7 240,27.1C280,27.5 320,30 360,32.7C400,35.4 440,40.1 480,43.2C520,46.4 560,50.1 600,51.6C640,53.1 680,53.3 720,52.1C760,50.9 800,47.5 840,44.4C880,41.3 920,36.6 960,33.7C1000,30.9 1040,28 1080,27.3C1120,26.6 1180,29.1 1200,29.5L1200,80L0,80Z"/>
+  </svg>
+  <svg class="trait trace" viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path d="M0,40C20,38.4 80,32.4 120,30.2C160,28.1 200,26.7 240,27.1C280,27.5 320,30 360,32.7C400,35.4 440,40.1 480,43.2C520,46.4 560,50.1 600,51.6C640,53.1 680,53.3 720,52.1C760,50.9 800,47.5 840,44.4C880,41.3 920,36.6 960,33.7C1000,30.9 1040,28 1080,27.3C1120,26.6 1180,29.1 1200,29.5"/>
+  </svg>
+</div>
+
+<!-- ═══ 07 — NOUS TROUVER ═════════════════════════════════════════════════ -->
+<section class="bloc bloc--creme" id="trouver" aria-labelledby="t-trouver">
+  <div class="page">
+    <p class="rail"><em>N° 07</em> <span>Nous trouver</span> <span class="rail__titre">Rien à réserver</span></p>
+
+    <div class="trouver">
+      <div>
+        <h2 class="titre leve" id="t-trouver">On pousse la porte, <em>c’est tout.</em></h2>
+        <div class="texte leve" style="--retard:1">
+          <p>
+            Horizon est au 38, entre la rue Edmond-Prieur et la place Saint-Similien. Bleu nuit,
+            lettres roses : on ne peut pas le rater. Quelques tables sur la terrasse dès qu’il
+            fait beau.
+          </p>
+        </div>
+
+        <dl class="pratique leve" style="--retard:2">
+          <div><dt>Adresse</dt><dd>38 rue Léon Jamin<br>44000 Nantes</dd></div>
+          <div><dt>Mardi → vendredi</dt><dd>9:30 → 18:30</dd></div>
+          <div><dt>Samedi</dt><dd>11:00 → 18:30</dd></div>
+          <div><dt>Dimanche &amp; lundi</dt><dd>Fermé</dd></div>
+          <div><dt>Réservation</dt><dd>Aucune<small>On s’installe où il y a de la place</small></dd></div>
+          <div><dt>Service</dt><dd>Sur place ou à emporter</dd></div>
+          <div><dt>Terrasse</dt><dd>Quelques tables, à la belle saison</dd></div>
+          <div><dt>Téléphone</dt><dd><span class="manque">[à fournir]</span></dd></div>
+          <div><dt>E-mail</dt><dd><span class="manque">[à fournir]</span></dd></div>
+        </dl>
+
+        <p class="trouver__actions">
+          <a class="ovale ovale--plein" href="https://www.google.com/maps/dir/?api=1&amp;destination=38+rue+L%C3%A9on+Jamin+44000+Nantes"
+             target="_blank" rel="noopener noreferrer">Itinéraire</a>
+          <a class="ovale" href="https://www.instagram.com/horizoncafe.nantes/"
+             target="_blank" rel="noopener noreferrer">Instagram</a>
+        </p>
+      </div>
+
+      <figure class="photo photo--creux revele">
+        <img src="assets/img/devanture-terrasse.jpg" width="768" height="512" loading="lazy" decoding="async"
+             alt="La devanture d’Horizon à l’angle de la rue : la façade bleu nuit, l’enseigne rose, la porte ouverte et la terrasse en bois où un client est assis au soleil.">
+        <figcaption class="legende">
+          <b>Fig. 08</b> Le 38, un matin de terrasse.
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ~ la ligne passe : crème → nuit ~ -->
+<div class="bord" data-de="creme" data-vers="nuit" aria-hidden="true">
+  <svg class="vague" viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path d="M0,40C20,41.9 80,48.8 120,51.3C160,53.7 200,55.4 240,54.9C280,54.4 320,51.5 360,48.4C400,45.3 440,39.9 480,36.3C520,32.6 560,28.3 600,26.6C640,24.9 680,24.7 720,26.1C760,27.4 800,31.4 840,34.9C880,38.4 920,43.9 960,47.2C1000,50.5 1040,53.8 1080,54.6C1120,55.5 1180,52.6 1200,52.1L1200,80L0,80Z"/>
+  </svg>
+  <svg class="trait trace" viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path d="M0,40C20,41.9 80,48.8 120,51.3C160,53.7 200,55.4 240,54.9C280,54.4 320,51.5 360,48.4C400,45.3 440,39.9 480,36.3C520,32.6 560,28.3 600,26.6C640,24.9 680,24.7 720,26.1C760,27.4 800,31.4 840,34.9C880,38.4 920,43.9 960,47.2C1000,50.5 1040,53.8 1080,54.6C1120,55.5 1180,52.6 1200,52.1"/>
+  </svg>
+</div>
+
+<!-- ═══ PIED ══════════════════════════════════════════════════════════════ -->
+<footer class="pied">
+  <svg class="pied__neon boucle trace" viewBox="0 0 300 145" fill="none" aria-hidden="true">
+    <path d="M49.7,12C46.7,12.9 37,13.9 31.7,17.2C26.4,20.6 21.3,26 18,32.1C14.7,38.2 12.4,46.1 12.1,53.9C11.8,61.7 13,70.8 16.1,79C19.2,87.2 24.3,95.9 30.6,103C36.9,110.1 45.3,116.9 54.2,121.7C63,126.6 73.6,130.3 83.9,132C94.2,133.7 105.5,133.7 115.8,132C126.1,130.3 136.7,126.6 145.5,121.7C154.4,116.9 162.8,110.1 169.1,103C175.4,95.9 180.5,87.2 183.6,79C186.7,70.8 187.9,61.7 187.6,53.9C187.3,46.1 185,38.2 181.7,32.1C178.4,26 173.3,20.6 168,17.2C162.7,13.9 156,12 150,12C144,12 137.3,13.9 132,17.2C126.7,20.6 121.6,26 118.3,32.1C115,38.2 112.7,46.1 112.4,53.9C112.1,61.7 113.3,70.8 116.4,79C119.5,87.2 124.6,95.9 130.9,103C137.2,110.1 145.6,116.9 154.5,121.7C163.3,126.6 173.9,130.3 184.2,132C194.5,133.7 205.8,133.7 216.1,132C226.4,130.3 237,126.6 245.8,121.7C254.7,116.9 263.1,110.1 269.4,103C275.7,95.9 280.8,87.2 283.9,79C287,70.8 288.2,61.7 287.9,53.9C287.6,46.1 285.3,38.2 282,32.1C278.7,26 273.6,20.6 268.3,17.2C263,13.9 253.3,12.9 250.3,12"/>
+  </svg>
+
+  <div class="page pied__grand">
+    <p class="pied__phrase leve">Du mardi au samedi, <em>la porte est ouverte.</em></p>
+
+    <p class="leve" style="--retard:1">
+      <a class="ovale ovale--plein" href="https://www.google.com/maps/dir/?api=1&amp;destination=38+rue+L%C3%A9on+Jamin+44000+Nantes"
+         target="_blank" rel="noopener noreferrer">38 rue Léon Jamin, Nantes</a>
+    </p>
+
+    <div class="pied__cols">
+      <div>
+        <a class="pied__logo" href="/" aria-label="Horizon par alaïa café — accueil">
+          <i class="marque" role="img" aria-hidden="true"></i>
+        </a>
+        <p class="mono" style="margin-top:16px">Coffee shop<br>&amp; cave à café<br>Nantes</p>
+      </div>
+      <div>
+        <p class="pied__titre">La maison</p>
+        <ul class="pied__liste">
+          <li><a href="#lieu">Le lieu</a></li>
+          <li><a href="#comptoir">Le comptoir</a></li>
+          <li><a href="#cave">La cave</a></li>
+          <li><a href="carte.html">La carte</a></li>
+          <li><a href="ateliers.html">Les ateliers</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="pied__titre">Ouverture</p>
+        <ul class="pied__liste">
+          <li><span>Mardi → vendredi</span></li>
+          <li><span>9:30 → 18:30</span></li>
+          <li><span>Samedi · 11:00 → 18:30</span></li>
+          <li><span>Dimanche &amp; lundi · fermé</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="pied__titre">Nous suivre</p>
+        <ul class="pied__liste">
+          <li><a href="https://www.instagram.com/horizoncafe.nantes/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="#trouver">Itinéraire</a></li>
+          <li><span class="manque">[téléphone à fournir]</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pied__bas">
+      <p style="margin:0">© 2026 AEFC Horizon · SAS · Nantes</p>
+      <nav class="pied__legaux" aria-label="Liens légaux">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Confidentialité</a>
+        <a href="confidentialite.html#cookies">Cookies</a>
+      </nav>
+      <p class="signature" style="margin:0">
+        Création
+        <a href="https://vokumagency.com" target="_blank" rel="noopener noreferrer"
+           aria-label="Visiter le site de l’agence Vokum">Vokum</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/horizon.js" defer></script>
+</body>
+</html>

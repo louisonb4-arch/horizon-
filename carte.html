@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La carte — Horizon par alaïa café, Nantes</title>
+<meta name="description" content="La carte d’Horizon : espresso, cortado, filtre, méthodes douces en V60, Chemex et Aeropress, pâtisseries et snacks de la cuisine d’Alaïa. 38 rue Léon Jamin, Nantes.">
+<meta name="theme-color" content="#20325A">
+<link rel="canonical" href="https://example.invalid/carte.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="La carte — Horizon par alaïa café">
+<meta property="og:description" content="Six cafés à l’ardoise, les méthodes douces, et la cuisine qui arrive de la rue de Budapest.">
+<meta property="og:image" content="https://example.invalid/assets/img/barista-tableau.jpg">
+<meta property="og:url" content="https://example.invalid/carte.html">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/icone-180.png">
+<link rel="preload" href="assets/font/gluten-400-900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/font/schibsted-400-900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/horizon.css">
+<script>
+  document.documentElement.classList.add('js');
+  setTimeout(function () {
+    if (!window.__horizon) document.documentElement.classList.remove('js');
+  }, 2600);
+</script>
+</head>
+
+<body>
+<a class="saut" href="#contenu">Aller au contenu</a>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <defs>
+    <clipPath id="coupe-vague" clipPathUnits="objectBoundingBox">
+      <path d="M0,0.07C0.0208,0.0759 0.0833,0.097 0.125,0.1054C0.1667,0.1137 0.2083,0.12 0.25,0.12C0.2917,0.12 0.3333,0.1137 0.375,0.1054C0.4167,0.097 0.4583,0.0818 0.5,0.07C0.5417,0.0582 0.5833,0.043 0.625,0.0346C0.6667,0.0263 0.7083,0.02 0.75,0.02C0.7917,0.02 0.8333,0.0263 0.875,0.0346C0.9167,0.043 0.9792,0.0641 1,0.07L1,1L0,1Z"/>
+    </clipPath>
+    <clipPath id="coupe-creux" clipPathUnits="objectBoundingBox">
+      <path d="M0,0.065C0.0208,0.0597 0.0833,0.0407 0.125,0.0332C0.1667,0.0257 0.2083,0.02 0.25,0.02C0.2917,0.02 0.3333,0.0257 0.375,0.0332C0.4167,0.0407 0.4583,0.0544 0.5,0.065C0.5417,0.0756 0.5833,0.0893 0.625,0.0968C0.6667,0.1043 0.7083,0.11 0.75,0.11C0.7917,0.11 0.8333,0.1043 0.875,0.0968C0.9167,0.0893 0.9792,0.0703 1,0.065L1,1L0,1Z"/>
+    </clipPath>
+  </defs>
+</svg>
+
+<header class="enseigne">
+  <div class="enseigne__page page">
+    <a class="enseigne__logo" href="index.html" aria-label="Horizon par alaïa café — accueil">
+      <i class="marque" role="img" aria-hidden="true"></i>
+    </a>
+    <nav class="enseigne__liens" aria-label="Navigation principale">
+      <a class="enseigne__lien" href="index.html#lieu">Le lieu</a>
+      <a class="enseigne__lien" href="index.html#comptoir">Le comptoir</a>
+      <a class="enseigne__lien" href="index.html#cave">La cave</a>
+      <a class="enseigne__lien" href="ateliers.html">Les ateliers</a>
+      <a class="enseigne__lien" href="index.html#trouver">Nous trouver</a>
+    </nav>
+    <a class="ovale enseigne__cta" href="carte.html" aria-current="page">La carte</a>
+    <button class="tirette" type="button" aria-expanded="false" aria-controls="tiroir" aria-label="Ouvrir le menu">
+      <svg width="26" height="16" viewBox="0 0 26 16" fill="none" aria-hidden="true">
+        <path class="tirette__t tirette__h" d="M1 3h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path class="tirette__t tirette__b" d="M1 13h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<div class="tiroir" id="tiroir" data-ouvert="non" aria-hidden="true">
+  <a class="tiroir__lien" href="index.html#lieu">Le lieu <span>01</span></a>
+  <a class="tiroir__lien" href="index.html#comptoir">Le comptoir <span>02</span></a>
+  <a class="tiroir__lien" href="index.html#cave">La cave <span>03</span></a>
+  <a class="tiroir__lien" href="ateliers.html">Les ateliers <span>04</span></a>
+  <a class="tiroir__lien" href="index.html#trouver">Nous trouver <span>07</span></a>
+  <a class="tiroir__lien" href="index.html">Accueil <span>←</span></a>
+  <div class="tiroir__pied">
+    <p class="mono">Mardi → vendredi · 9:30 → 18:30<br>Samedi · 11:00 → 18:30<br>Dimanche et lundi · fermé</p>
+  </div>
+</div>
+
+<main id="contenu">
+
+<!-- ═══ TÊTE ══════════════════════════════════════════════════════════════ -->
+<section class="tete" aria-labelledby="t-carte">
+  <div class="page">
+    <p class="rail"><em>La carte</em> <span>Horizon</span> <span class="rail__titre">Elle bouge, exprès</span></p>
+    <h1 class="tete__titre" id="t-carte">La carte</h1>
+    <p class="tete__chapeau">
+      Elle n’est écrite nulle part très longtemps. Six cafés à l’ardoise, une vitrine qui
+      change, et un tableau de lettres en bois qui fait office de menu. Ce qui suit, ce sont
+      les familles — le détail du jour se lit sur place.
+    </p>
+  </div>
+</section>
+
+<div class="bord" data-de="nuit" data-vers="creme" aria-hidden="true">
+  <svg class="vague" viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path d="M0,40C20,38.4 80,32.4 120,30.2C160,28.1 200,26.7 240,27.1C280,27.5 320,30 360,32.7C400,35.4 440,40.1 480,43.2C520,46.4 560,50.1 600,51.6C640,53.1 680,53.3 720,52.1C760,50.9 800,47.5 840,44.4C880,41.3 920,36.6 960,33.7C1000,30.9 1040,28 1080,27.3C1120,26.6 1180,29.1 1200,29.5L1200,80L0,80Z"/>
+  </svg>
+  <svg class="trait trace" viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path d="M0,40C20,38.4 80,32.4 120,30.2C160,28.1 200,26.7 240,27.1C280,27.5 320,30 360,32.7C400,35.4 440,40.1 480,43.2C520,46.4 560,50.1 600,51.6C640,53.1 680,53.3 720,52.1C760,50.9 800,47.5 840,44.4C880,41.3 920,36.6 960,33.7C1000,30.9 1040,28 1080,27.3C1120,26.6 1180,29.1 1200,29.5"/>
+  </svg>
+</div>
+
+<section class="bloc bloc--creme" style="padding-block:clamp(20px,2vw,34px) clamp(60px,7vw,110px)">
+  <div class="page page--etroit">
+
+    <!-- ── Le café ────────────────────────────────────────────────────── -->
+    <div class="carte-groupe">
+      <div class="carte-groupe__tete">
+        <h2 class="carte-groupe__titre leve">Le café</h2>
+        <p class="carte-groupe__note">Six références au comptoir à un moment donné.<br>Elles changent.</p>
+      </div>
+      <ul class="lignes leve" style="--retard:1">
+        <li>
+          <span class="lignes__nom">Espresso</span>
+          <span class="lignes__fil"></span>
+          <span class="lignes__prix" data-flou>2 → 5 €</span>
+        </li>
+        <li>
+          <span class="lignes__nom">Cortado</span>
+          <span class="lignes__fil"></span>
+          <span class="lignes__prix" data-flou>2 → 5 €</span>
+        </li>
+        <li>
+          <span class="lignes__nom">Filtre du jour</span>
+          <span class="lignes__fil"></span>
+          <span class="lignes__prix" data-flou>2 → 5 €</span>
+        </li>
+        <li>
+          <span class="lignes__nom">Cappuccino, latte, mocaccino</span>
+          <span class="lignes__fil"></span>
+          <span class="lignes__prix" data-flou>1,50 → 5 €</span>
+        </li>
+        <li>
+          <span class="lignes__nom">Lait végétal</span>
+          <span class="lignes__fil"></span>
+          <span class="lignes__prix" data-flou>+ 0,50 €</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ── Les méthodes douces ────────────────────────────────────────── -->
+    <div class="carte-groupe">
+      <div class="carte-groupe__tete">
+        <h2 class="carte-groupe__titre leve">Les méthodes douces</h2>
+        <p class="carte-groupe__note">Comptez quatre minutes environ.<br>C’est le temps que l’eau descend.</p>
+      </div>
+      <ul class="lignes leve" style="--retard:1">
+        <li>
+          <span class="lignes__nom">V60</span>
+          <span class="lignes__desc">Le plus net des trois</span>
+          <span class="lignes__fil"></span>
+          <span class="lignes__prix" data-flou>6 → 9 €</span>
+        </li>
+        <li>
+          <span class="lignes__nom">Chemex</span>
+          <span class="lignes__desc">Pour deux, ou pour rester longtemps</span>
+          <span class="lignes__fil"></span>
+          <span class="lignes__prix" data-flou>6 → 9 €</span>
+        </li>
+        <li>
+          <span class="lignes__nom">Aeropress</span>
+          <span class="lignes__desc">Plus dense, plus court</span>
+          <span class="lignes__fil"></span>
+          <span class="lignes__prix" data-flou>6 → 9 €</span>
+        </li>
+      </ul>
+      <p class="legende">
+        <b>Note</b> Le tarif dépend du cru : un lot rare monte plus haut qu’un café d’assemblage.
+        Les prix du jour sont affichés au comptoir.
+      </p>
+    </div>
+
+    <!-- ── À côté ─────────────────────────────────────────────────────── -->
+    <div class="carte-groupe">
+      <div class="carte-groupe__tete">
+        <h2 class="carte-groupe__titre leve">À côté du café</h2>
+        <p class="carte-groupe__note">Sur le tableau de lettres, à droite de la machine.</p>
+      </div>
+      <ul class="lignes leve" style="--retard:1">
+        <li><span class="lignes__nom">Cold brew</span><span class="lignes__fil"></span><span class="lignes__prix manque">[à fournir]</span></li>
+        <li><span class="lignes__nom">Matcha</span><span class="lignes__fil"></span><span class="lignes__prix manque">[à fournir]</span></li>
+        <li><span class="lignes__nom">Golden latte</span><span class="lignes__fil"></span><span class="lignes__prix manque">[à fournir]</span></li>
+        <li><span class="lignes__nom">Chocolat chaud</span><span class="lignes__fil"></span><span class="lignes__prix manque">[à fournir]</span></li>
+        <li><span class="lignes__nom">Thé du moment</span><span class="lignes__fil"></span><span class="lignes__prix manque">[à fournir]</span></li>
+      </ul>
+      <p class="legende">
+        <b>Note</b> Boissons relevées sur le tableau de lettres, en photo. Intitulés et tarifs
+        à confirmer par la maison.
+      </p>
+    </div>
+  </div>
+
+  <figure class="photo photo--vague revele" style="margin-block:clamp(34px,4vw,58px)">
+    <img src="assets/img/barista-tableau.jpg" width="1440" height="1919" loading="lazy" decoding="async"
+         style="max-height:52vh;object-fit:cover;object-position:50% 30%;width:100%"
+         alt="Le tableau de lettres en bois derrière le comptoir : mocaccino, filtre du jour, à la carte, cold brew, matcha, golden latte, chocolat chaud, thé du moment.">
+    <figcaption class="legende page">
+      <b>Fig. 09</b> La carte des boissons, composée lettre par lettre.
+    </figcaption>
+  </figure>
+
+  <div class="page page--etroit">
+    <!-- ── La cuisine ─────────────────────────────────────────────────── -->
+    <div class="carte-groupe">
+      <div class="carte-groupe__tete">
+        <h2 class="carte-groupe__titre leve">La cuisine</h2>
+        <p class="carte-groupe__note">Elle arrive d’Alaïa, 4 rue de Budapest.<br>La vitrine change tous les jours.</p>
+      </div>
+      <ul class="lignes leve" style="--retard:1">
+        <li>
+          <span class="lignes__nom">Pâtisseries du jour</span>
+          <span class="lignes__desc">Cookies, brownies, cakes, cheesecake</span>
+          <span class="lignes__fil"></span>
+          <span class="lignes__prix" data-flou>2,50 → 4,50 €</span>
+        </li>
+        <li>
+          <span class="lignes__nom">Scones</span>
+          <span class="lignes__fil"></span>
+          <span class="lignes__prix manque">[à fournir]</span>
+        </li>
+        <li>
+          <span class="lignes__nom">Buns</span>
+          <span class="lignes__desc">Version du moment, avec une petite salade</span>
+          <span class="lignes__fil"></span>
+          <span class="lignes__prix" data-flou>8 → 10 €</span>
+        </li>
+        <li>
+          <span class="lignes__nom">Grilled cheese</span>
+          <span class="lignes__fil"></span>
+          <span class="lignes__prix" data-flou>8 → 10 €</span>
+        </li>
+        <li>
+          <span class="lignes__nom">Salades</span>
+          <span class="lignes__fil"></span>
+          <span class="lignes__prix" data-flou>8 → 10 €</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ── À emporter ─────────────────────────────────────────────────── -->
+    <div class="carte-groupe">
+      <div class="carte-groupe__tete">
+        <h2 class="carte-groupe__titre leve">L’étagère</h2>
+        <p class="carte-groupe__note">Une trentaine de références.<br>Ce qui passe au comptoir en vient.</p>
+      </div>
+      <ul class="lignes leve" style="--retard:1">
+        <li>
+          <span class="lignes__nom">Café en grains</span>
+          <span class="lignes__desc">Paquets, coffrets et cannettes, 100 g et 200 g</span>
+          <span class="lignes__fil"></span>
+          <span class="lignes__prix manque">[à fournir]</span>
+        </li>
+        <li>
+          <span class="lignes__nom">Matériel</span>
+          <span class="lignes__desc">Filtres, carafes, moulins, balances</span>
+          <span class="lignes__fil"></span>
+          <span class="lignes__prix manque">[à fournir]</span>
+        </li>
+        <li>
+          <span class="lignes__nom">Les ateliers</span>
+          <span class="lignes__desc">Méthodes douces, analyse sensorielle, latte art</span>
+          <span class="lignes__fil"></span>
+          <span class="lignes__prix"><a href="ateliers.html">Voir →</a></span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ── L'avertissement, en clair ──────────────────────────────────── -->
+    <div class="carte-groupe">
+      <p class="legende" style="font-size:13px">
+        <b>Sur ces prix</b>
+        Les fourchettes ci-dessus proviennent de la presse locale nantaise (janvier 2024) et
+        n’ont pas été confirmées par la maison. Elles sont données à titre indicatif et
+        peuvent avoir changé. Les tarifs qui font foi sont ceux affichés au comptoir,
+        38 rue Léon Jamin.
+      </p>
+      <p style="margin-top:26px">
+        <a class="ovale ovale--plein" href="index.html#trouver">Nous trouver</a>
+        <a class="ovale" href="ateliers.html">Les ateliers</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="bord" data-de="creme" data-vers="nuit" aria-hidden="true">
+  <svg class="vague" viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path d="M0,40C20,41.9 80,48.8 120,51.3C160,53.7 200,55.4 240,54.9C280,54.4 320,51.5 360,48.4C400,45.3 440,39.9 480,36.3C520,32.6 560,28.3 600,26.6C640,24.9 680,24.7 720,26.1C760,27.4 800,31.4 840,34.9C880,38.4 920,43.9 960,47.2C1000,50.5 1040,53.8 1080,54.6C1120,55.5 1180,52.6 1200,52.1L1200,80L0,80Z"/>
+  </svg>
+  <svg class="trait trace" viewBox="0 0 1200 80" preserveAspectRatio="none">
+    <path d="M0,40C20,41.9 80,48.8 120,51.3C160,53.7 200,55.4 240,54.9C280,54.4 320,51.5 360,48.4C400,45.3 440,39.9 480,36.3C520,32.6 560,28.3 600,26.6C640,24.9 680,24.7 720,26.1C760,27.4 800,31.4 840,34.9C880,38.4 920,43.9 960,47.2C1000,50.5 1040,53.8 1080,54.6C1120,55.5 1180,52.6 1200,52.1"/>
+  </svg>
+</div>
+
+<footer class="pied">
+  <div class="page pied__grand">
+    <p class="pied__phrase leve">Le tableau change. <em>Revenez voir.</em></p>
+    <p class="leve" style="--retard:1">
+      <a class="ovale ovale--plein" href="https://www.google.com/maps/dir/?api=1&amp;destination=38+rue+L%C3%A9on+Jamin+44000+Nantes"
+         target="_blank" rel="noopener noreferrer">38 rue Léon Jamin, Nantes</a>
+    </p>
+    <div class="pied__cols">
+      <div>
+        <a class="pied__logo" href="index.html" aria-label="Horizon par alaïa café — accueil">
+          <i class="marque" role="img" aria-hidden="true"></i>
+        </a>
+        <p class="mono" style="margin-top:16px">Coffee shop<br>&amp; cave à café<br>Nantes</p>
+      </div>
+      <div>
+        <p class="pied__titre">La maison</p>
+        <ul class="pied__liste">
+          <li><a href="index.html#lieu">Le lieu</a></li>
+          <li><a href="index.html#comptoir">Le comptoir</a></li>
+          <li><a href="index.html#cave">La cave</a></li>
+          <li><a href="carte.html">La carte</a></li>
+          <li><a href="ateliers.html">Les ateliers</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="pied__titre">Ouverture</p>
+        <ul class="pied__liste">
+          <li><span>Mardi → vendredi</span></li>
+          <li><span>9:30 → 18:30</span></li>
+          <li><span>Samedi · 11:00 → 18:30</span></li>
+          <li><span>Dimanche &amp; lundi · fermé</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="pied__titre">Nous suivre</p>
+        <ul class="pied__liste">
+          <li><a href="https://www.instagram.com/horizoncafe.nantes/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="index.html#trouver">Itinéraire</a></li>
+          <li><span class="manque">[téléphone à fournir]</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied__bas">
+      <p style="margin:0">© 2026 AEFC Horizon · SAS · Nantes</p>
+      <nav class="pied__legaux" aria-label="Liens légaux">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Confidentialité</a>
+        <a href="confidentialite.html#cookies">Cookies</a>
+      </nav>
+      <p class="signature" style="margin:0">
+        Création
+        <a href="https://vokumagency.com" target="_blank" rel="noopener noreferrer"
+           aria-label="Visiter le site de l’agence Vokum">Vokum</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/horizon.js" defer></script>
+</body>
+</html>
