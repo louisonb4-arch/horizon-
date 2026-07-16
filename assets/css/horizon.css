@@ -89,7 +89,12 @@
 
 /* ── Base ────────────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html {
+  -webkit-text-size-adjust: 100%; scroll-behavior: smooth;
+  /* le flash gris du tap n'est pas de la maison : on le coupe et on répond
+     nous-mêmes, à l'ovale, dans « Affinage tactile » plus bas. */
+  -webkit-tap-highlight-color: transparent;
+}
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
@@ -134,7 +139,11 @@ a { color: inherit; }
 /* ── Grille ──────────────────────────────────────────────────────────────── */
 .page {
   width: var(--col); margin-inline: auto;
-  padding-inline: var(--marge);
+  /* l'encoche compte comme une marge : en paysage sur un écran à oreilles,
+     le texte ne passe jamais sous le capteur. En portrait, env() vaut 0. */
+  padding-inline:
+    max(var(--marge), env(safe-area-inset-left))
+    max(var(--marge), env(safe-area-inset-right));
 }
 .page--etroit { max-width: 980px; }
 
@@ -521,7 +530,11 @@ a { color: inherit; }
   overflow-x: auto; overscroll-behavior-x: contain;
   scroll-snap-type: x proximity;
   padding: clamp(28px, 3.4vw, 46px) var(--marge) 8px;
-  margin-inline: calc(var(--marge) * -1);
+  /* la rangée est déjà un enfant pleine largeur de la section : pas de marge
+     négative à sortir (elle débordait de 2×marge et élargissait le viewport
+     mobile, décalant tout le reste). Le premier tirage s'aligne sur la colonne
+     de texte par le padding — même marge que les paragraphes au-dessus. */
+  margin-inline: 0;
   scrollbar-width: thin; scrollbar-color: var(--rose) transparent;
 }
 .rangee::-webkit-scrollbar { height: 3px; }
@@ -847,6 +860,101 @@ a { color: inherit; }
   .atelier__num { padding-top: 0; }
 }
 
+/* ═══ AFFINAGE TACTILE — le tactile mérite le même soin que le desktop ════ */
+/* Sur un écran tactile il n'y a pas de survol : les interactions signature   */
+/* de la maison — l'ovale qui se remplit — ne se voyaient jamais. On les rend */
+/* au doigt. Même DA, même geste ; seul le déclencheur change (:active).      */
+@media (hover: none) {
+  /* L'ovale se remplit sous le doigt, exactement comme au survol. */
+  .ovale:active::before { background: var(--rose); transform: scale(1.03); }
+  .ovale:active { color: var(--nuit); }
+  .ovale--plein:active::before { background: var(--rose-2); border-color: var(--rose-2); }
+  .bloc--creme .ovale:active { color: var(--creme); }
+  .bloc--creme .ovale:active::before { background: var(--nuit); }
+
+  /* Les liens du pied et le lettrage passent en rose, comme l'enseigne. */
+  .pied__liste a:active,
+  .enseigne__logo:active,
+  .texte a:active { color: var(--rose); }
+  .bloc--creme .texte a:active { color: var(--nuit); }
+  .signature a:active { color: var(--rose); }
+  .signature a:active::before { opacity: 1; transform: scale(1); }
+
+  /* Un tirage touché s'éclaircit à peine — assez pour dire « c'est pris ». */
+  .rangee .photo:active, .table__grille .photo:active,
+  .lieu__bande .photo:active, .etagere .photo:active { opacity: .82; }
+}
+
+/* ── Le tiroir tactile, repris au même niveau de finition que l'enseigne ── */
+/* Bug corrigé : la ligne mono du pied, insécable, étirait tout le tiroir    */
+/* au-delà de l'écran (flex-column, align stretch) et poussait les numéros   */
+/* hors cadre. On borne le tiroir et on laisse la ligne respirer.            */
+.tiroir {
+  /* l'encoche du bas (barre d'accueil des écrans sans bouton) reste au large ;
+     en paysage, les oreilles latérales aussi. */
+  padding-bottom: max(32px, env(safe-area-inset-bottom));
+  padding-top: max(88px, calc(68px + env(safe-area-inset-top) + 20px));
+  padding-inline:
+    max(var(--marge), env(safe-area-inset-left))
+    max(var(--marge), env(safe-area-inset-right));
+}
+.tiroir__lien { width: 100%; }
+/* le numéro ne quitte jamais le cadre ; le titre prend ce qui reste */
+.tiroir__lien span { flex: none; }
+.tiroir__pied .mono {
+  overflow-wrap: anywhere;
+  font-size: clamp(11px, 3vw, 12.5px);
+  letter-spacing: .02em;
+}
+
+/* Entrée du tiroir : les liens montent l'un après l'autre, comme la ligne
+   qui se trace. Purement décoratif — neutralisé si le mouvement est réduit,
+   et l'état ouvert force toujours l'opacité à 1 (jamais de lien fantôme). */
+.js .tiroir__lien {
+  opacity: 0; transform: translateY(10px);
+  transition: opacity .5s var(--sortie), transform .5s var(--sortie), color .18s var(--sortie);
+}
+.js .tiroir[data-ouvert='oui'] .tiroir__lien { opacity: 1; transform: none; }
+.js .tiroir[data-ouvert='oui'] .tiroir__lien:nth-child(1) { transition-delay: .06s; }
+.js .tiroir[data-ouvert='oui'] .tiroir__lien:nth-child(2) { transition-delay: .10s; }
+.js .tiroir[data-ouvert='oui'] .tiroir__lien:nth-child(3) { transition-delay: .14s; }
+.js .tiroir[data-ouvert='oui'] .tiroir__lien:nth-child(4) { transition-delay: .18s; }
+.js .tiroir[data-ouvert='oui'] .tiroir__lien:nth-child(5) { transition-delay: .22s; }
+.js .tiroir[data-ouvert='oui'] .tiroir__lien:nth-child(6) { transition-delay: .26s; }
+.js .tiroir[data-ouvert='oui'] .tiroir__lien:nth-child(7) { transition-delay: .30s; }
+.tiroir__lien:active { color: var(--rose); }
+
+/* ── Le carrousel du comptoir : défilement inertiel et alignement propre ── */
+.rangee {
+  -webkit-overflow-scrolling: touch;   /* inertie native sur iOS */
+  scroll-padding-left: var(--marge);   /* le snap tombe sur la marge, pas à 0 */
+}
+
+/* ── Petits débordements de texte sur écran étroit ──────────────────────── */
+@media (max-width: 560px) {
+  /* « Entre la rue Edmond-Prieur et la place Saint-Similien » : une valeur
+     longue doit s'enrouler, jamais sortir du cadre. */
+  .faits__val { flex: 1 1 auto; overflow-wrap: anywhere; }
+  /* le fil d'ariane éditorial du rail s'enroule au lieu d'être coupé */
+  .rail__titre { overflow-wrap: anywhere; }
+  /* un long « [à fournir…] » des pages légales tient sur une ligne au large,
+     mais doit pouvoir s'enrouler sur mobile plutôt que sortir du cadre */
+  .manque { white-space: normal; overflow-wrap: anywhere; }
+  /* le hero garde de l'air : le lettrage ne colle pas au bord haut */
+  .hero__mono { margin-bottom: clamp(18px, 5vw, 26px); }
+}
+
+/* ── Le néon du hero : un reflet, pas un obstacle, sur petit écran ───────── */
+@media (max-width: 640px) {
+  /* posé dans le coin, très effacé : il éclaire le ciel derrière le lettrage
+     sans jamais brouiller la lecture (il reste sous le texte, z-index 1). */
+  .hero__neon {
+    width: clamp(150px, 44vw, 220px);
+    top: clamp(96px, 22vw, 132px); right: -42px;
+    opacity: .34;
+  }
+}
+
 /* ── Le mouvement est une option, pas une condition ──────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -857,6 +965,7 @@ a { color: inherit; }
   .js .leve, .leve { opacity: 1; transform: none; }
   .js .revele img { -webkit-mask-image: none; mask-image: none; }
   .js .trace path { stroke-dasharray: none; stroke-dashoffset: 0; }
+  .js .tiroir__lien { opacity: 1; transform: none; }
   .tiroir { transition: none; }
 }
 
