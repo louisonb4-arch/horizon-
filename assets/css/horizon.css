@@ -107,7 +107,12 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  /* La page est verrouillée sur l'axe horizontal : rien ne dépasse (overflow),
+     et aucun rebond élastique latéral n'est permis (overscroll). Le site ne
+     « part » plus à gauche ni à droite au doigt — il reste fixe. Le carrousel
+     du comptoir garde son propre défilement, contenu, sans entraîner la page. */
   overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 img, svg { max-width: 100%; }
