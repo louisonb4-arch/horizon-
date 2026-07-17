@@ -402,6 +402,23 @@ a { color: inherit; }
   width: min(100%, 720px); height: auto; display: block;
   color: var(--rose);
 }
+/* L'enseigne s'allume — le tube de néon qui s'amorce : un seul battement doux
+   (jamais un strobe), puis la lueur chaude se pose et reste, comme un néon
+   allumé. C'est le geste central de la maison, porté sur le lettrage même.
+   Se déclenche quand le lettrage entre à l'écran (.vu), après sa montée ;
+   la lueur est un filtre, elle ne touche ni la place ni l'opacité du .leve. */
+.js .hero__wordmark.vu {
+  animation: hero-allume 1.6s var(--sortie) .45s both;
+}
+@keyframes hero-allume {
+  0%   { filter: brightness(.75); }
+  18%  { filter: brightness(1.05) drop-shadow(0 0 12px rgba(255, 231, 190, .55)); }
+  30%  { filter: brightness(.84)  drop-shadow(0 0  6px rgba(255, 231, 190, .30)); }
+  46%  { filter: brightness(1)    drop-shadow(0 0 16px rgba(255, 231, 190, .70))
+                                  drop-shadow(0 0 32px rgba(245, 169, 169, .38)); }
+  100% { filter: brightness(1)    drop-shadow(0 0  7px rgba(255, 231, 190, .40))
+                                  drop-shadow(0 0 20px rgba(245, 169, 169, .22)); }
+}
 .hero__phrase {
   display: block;
   font-family: var(--f-titre);
@@ -971,6 +988,8 @@ a { color: inherit; }
   .js .revele img { -webkit-mask-image: none; mask-image: none; }
   .js .trace path { stroke-dasharray: none; stroke-dashoffset: 0; }
   .js .tiroir__lien { opacity: 1; transform: none; }
+  /* pas d'amorçage clignotant : l'enseigne reste allumée, lueur posée et fixe */
+  .js .hero__wordmark.vu { animation: none; filter: drop-shadow(0 0 6px rgba(255, 231, 190, .32)); }
   .tiroir { transition: none; }
 }
 
