@@ -401,8 +401,8 @@ a { color: inherit; }
 }
 .ouverture__scene {
   display: grid; place-items: center;
-  gap: clamp(14px, 3.4vw, 26px);
-  width: min(88vw, 520px);
+  gap: clamp(16px, 4vw, 32px);
+  width: min(78vw, 460px);
   /* toute la scène s'efface avec le rideau, sans traîner */
   animation: ouverture-fondu .5s var(--sortie) 2.15s forwards;
 }
@@ -415,38 +415,29 @@ a { color: inherit; }
   stroke-dasharray: 1000; stroke-dashoffset: 1000;   /* pathLength=1000 sur le tracé */
   animation: ouverture-trace 1.35s var(--sortie) .15s forwards;
 }
-/* Le nom s'écrit lettre par lettre — chaque lettre monte et s'allume à son
-   tour, dans la foulée du néon qui vient de se tracer. En Gluten (la police de
-   la maison, préchargée), rose sur le bleu nuit : l'enseigne, comme sur place. */
-.ouverture__mot {
-  margin: 0; text-align: center;
-  font-family: var(--f-titre); font-weight: 800;
-  font-size: clamp(46px, 16vw, 104px); line-height: 1;
-  letter-spacing: -.01em; color: var(--rose);
-}
-.ouverture__mot span {
-  display: inline-block;
-  opacity: 0; transform: translateY(16px) scale(.92);
-  animation: ouverture-lettre .5s var(--sortie) both;
-}
-/* la cascade : ~90 ms entre chaque lettre, après le tracé du néon */
-.ouverture__mot span:nth-child(1) { animation-delay: .55s; }
-.ouverture__mot span:nth-child(2) { animation-delay: .64s; }
-.ouverture__mot span:nth-child(3) { animation-delay: .73s; }
-.ouverture__mot span:nth-child(4) { animation-delay: .82s; }
-.ouverture__mot span:nth-child(5) { animation-delay: .91s; }
-.ouverture__mot span:nth-child(6) { animation-delay: 1s; }
-.ouverture__mot span:nth-child(7) { animation-delay: 1.09s; }
-/* le sous-titre suit, une fois le nom écrit */
-.ouverture__sous {
-  margin: 0; text-align: center;
-  font-family: var(--f-titre); font-weight: 500; font-style: italic;
-  font-size: clamp(18px, 5vw, 30px); line-height: 1; color: var(--rose);
-  opacity: 0; transform: translateY(8px);
-  animation: ouverture-lettre .55s var(--sortie) 1.25s forwards;
+/* Le vrai logo de la maison (typo exacte), révélé de gauche à droite comme une
+   enseigne qui s'allume, dans la foulée du néon. Le logo est un tracé unique et
+   fondu — impossible de le découper proprement en lettres — alors on l'éclaire
+   d'un balayage : un masque en dégradé passe dessus, sa partie opaque découvre
+   le lettrage au fil du passage. */
+.ouverture__marque {
+  width: 100%; height: auto; display: block;
+  opacity: 0; transform: translateY(10px);
+  -webkit-mask-image: linear-gradient(90deg, #000 0 38%, transparent 58% 100%);
+          mask-image: linear-gradient(90deg, #000 0 38%, transparent 58% 100%);
+  -webkit-mask-size: 265% 100%; mask-size: 265% 100%;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-position: 100% 0; mask-position: 100% 0;   /* départ : tranche transparente = caché */
+  animation: ouverture-marque 1.15s var(--sortie) .7s forwards;
 }
 @keyframes ouverture-trace  { to { stroke-dashoffset: 0; } }
-@keyframes ouverture-lettre { to { opacity: 1; transform: none; } }
+@keyframes ouverture-marque {
+  0%   { opacity: 0; transform: translateY(10px);
+         -webkit-mask-position: 100% 0; mask-position: 100% 0; }
+  15%  { opacity: 1; }
+  100% { opacity: 1; transform: none;
+         -webkit-mask-position: 0% 0; mask-position: 0% 0; }   /* tranche opaque = révélé */
+}
 @keyframes ouverture-fondu  { to { opacity: 0; } }
 @keyframes ouverture-rideau {
   to { transform: translateY(-100%); visibility: hidden; }
