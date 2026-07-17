@@ -384,6 +384,48 @@ a { color: inherit; }
 .tiroir__lien:active { color: var(--rose); }
 .tiroir__pied { margin-top: 30px; }
 
+/* ═══ L'OUVERTURE — le rideau de la ligne ════════════════════════════════ */
+/* Dès qu'on arrive : le tube de néon se trace sur le bleu nuit, l'enseigne  */
+/* s'allume, puis le rideau se lève sur la page. C'est le geste de la maison */
+/* joué en grand, une fois, à l'entrée.                                      */
+/* N'existe qu'avec le script : la classe .js est posée avant le premier     */
+/* rendu (voir le <head>), donc pas de flash ; sans JS, aucun voile.         */
+.ouverture { display: none; }
+.js .ouverture {
+  position: fixed; inset: 0; z-index: 300;
+  display: grid; place-items: center;
+  background: var(--nuit);
+  /* le rideau se lève et s'efface — puis se retire pour de bon (visibility) */
+  animation: ouverture-rideau .8s var(--dedans) 1.55s forwards;
+}
+.ouverture__scene {
+  display: grid; place-items: center;
+  gap: clamp(16px, 4vw, 34px);
+  width: min(74vw, 440px);
+  /* toute la scène s'efface avec le rideau, sans traîner */
+  animation: ouverture-fondu .5s var(--sortie) 1.75s forwards;
+}
+.ouverture__boucle { width: clamp(120px, 34vw, 210px); height: auto; overflow: visible; }
+.ouverture__boucle path {
+  fill: none; stroke: var(--neon); stroke-width: 6;
+  stroke-linecap: round; stroke-linejoin: round;
+  filter: drop-shadow(0 0 9px rgba(255, 231, 190, .55))
+          drop-shadow(0 0 26px rgba(255, 231, 190, .28));
+  stroke-dasharray: 1000; stroke-dashoffset: 1000;   /* pathLength=1000 sur le tracé */
+  animation: ouverture-trace 1.35s var(--sortie) .15s forwards;
+}
+.ouverture__marque {
+  width: 100%; height: auto; display: block;
+  opacity: 0; transform: translateY(12px);
+  animation: ouverture-marque .7s var(--sortie) .9s forwards;
+}
+@keyframes ouverture-trace  { to { stroke-dashoffset: 0; } }
+@keyframes ouverture-marque { to { opacity: 1; transform: none; } }
+@keyframes ouverture-fondu  { to { opacity: 0; } }
+@keyframes ouverture-rideau {
+  to { transform: translateY(-100%); visibility: hidden; }
+}
+
 /* ═══ HERO — le paysage : le ciel, la ligne, la salle ════════════════════ */
 .hero {
   position: relative;
@@ -406,23 +448,6 @@ a { color: inherit; }
 .hero__wordmark {
   width: min(100%, 720px); height: auto; display: block;
   color: var(--rose);
-}
-/* L'enseigne s'allume — le tube de néon qui s'amorce : un seul battement doux
-   (jamais un strobe), puis la lueur chaude se pose et reste, comme un néon
-   allumé. C'est le geste central de la maison, porté sur le lettrage même.
-   Se déclenche quand le lettrage entre à l'écran (.vu), après sa montée ;
-   la lueur est un filtre, elle ne touche ni la place ni l'opacité du .leve. */
-.js .hero__wordmark.vu {
-  animation: hero-allume 1.6s var(--sortie) .45s both;
-}
-@keyframes hero-allume {
-  0%   { filter: brightness(.75); }
-  18%  { filter: brightness(1.05) drop-shadow(0 0 12px rgba(255, 231, 190, .55)); }
-  30%  { filter: brightness(.84)  drop-shadow(0 0  6px rgba(255, 231, 190, .30)); }
-  46%  { filter: brightness(1)    drop-shadow(0 0 16px rgba(255, 231, 190, .70))
-                                  drop-shadow(0 0 32px rgba(245, 169, 169, .38)); }
-  100% { filter: brightness(1)    drop-shadow(0 0  7px rgba(255, 231, 190, .40))
-                                  drop-shadow(0 0 20px rgba(245, 169, 169, .22)); }
 }
 .hero__phrase {
   display: block;
@@ -993,8 +1018,8 @@ a { color: inherit; }
   .js .revele img { -webkit-mask-image: none; mask-image: none; }
   .js .trace path { stroke-dasharray: none; stroke-dashoffset: 0; }
   .js .tiroir__lien { opacity: 1; transform: none; }
-  /* pas d'amorçage clignotant : l'enseigne reste allumée, lueur posée et fixe */
-  .js .hero__wordmark.vu { animation: none; filter: drop-shadow(0 0 6px rgba(255, 231, 190, .32)); }
+  /* pas de rideau d'ouverture en mouvement réduit : on entre directement */
+  .js .ouverture { display: none; }
   .tiroir { transition: none; }
 }
 
