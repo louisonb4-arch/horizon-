@@ -395,15 +395,16 @@ a { color: inherit; }
   position: fixed; inset: 0; z-index: 300;
   display: grid; place-items: center;
   background: var(--nuit);
-  /* le rideau se lève et s'efface — puis se retire pour de bon (visibility) */
-  animation: ouverture-rideau .8s var(--dedans) 1.55s forwards;
+  /* le rideau se lève et s'efface — puis se retire pour de bon (visibility) ;
+     il part une fois le lettrage entièrement allumé */
+  animation: ouverture-rideau .8s var(--dedans) 1.95s forwards;
 }
 .ouverture__scene {
   display: grid; place-items: center;
   gap: clamp(16px, 4vw, 34px);
   width: min(74vw, 440px);
   /* toute la scène s'efface avec le rideau, sans traîner */
-  animation: ouverture-fondu .5s var(--sortie) 1.75s forwards;
+  animation: ouverture-fondu .5s var(--sortie) 2.15s forwards;
 }
 .ouverture__boucle { width: clamp(120px, 34vw, 210px); height: auto; overflow: visible; }
 .ouverture__boucle path {
@@ -414,13 +415,27 @@ a { color: inherit; }
   stroke-dasharray: 1000; stroke-dashoffset: 1000;   /* pathLength=1000 sur le tracé */
   animation: ouverture-trace 1.35s var(--sortie) .15s forwards;
 }
+/* Le lettrage s'allume de gauche à droite — l'enseigne qui s'éclaire mot après
+   mot, dans la foulée du néon qui vient de se tracer. Un masque en dégradé
+   balaie le lettrage : sa partie opaque découvre le texte au fil du passage. */
 .ouverture__marque {
   width: 100%; height: auto; display: block;
-  opacity: 0; transform: translateY(12px);
-  animation: ouverture-marque .7s var(--sortie) .9s forwards;
+  opacity: 0; transform: translateY(10px);
+  -webkit-mask-image: linear-gradient(90deg, #000 0 40%, transparent 60% 100%);
+          mask-image: linear-gradient(90deg, #000 0 40%, transparent 60% 100%);
+  -webkit-mask-size: 260% 100%; mask-size: 260% 100%;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-position: 100% 0; mask-position: 100% 0;   /* départ : tranche transparente = caché */
+  animation: ouverture-marque 1s var(--sortie) .85s forwards;
 }
 @keyframes ouverture-trace  { to { stroke-dashoffset: 0; } }
-@keyframes ouverture-marque { to { opacity: 1; transform: none; } }
+@keyframes ouverture-marque {
+  0%   { opacity: 0; transform: translateY(10px);
+         -webkit-mask-position: 100% 0; mask-position: 100% 0; }
+  18%  { opacity: 1; }
+  100% { opacity: 1; transform: none;
+         -webkit-mask-position: 0% 0; mask-position: 0% 0; }   /* tranche opaque = révélé */
+}
 @keyframes ouverture-fondu  { to { opacity: 0; } }
 @keyframes ouverture-rideau {
   to { transform: translateY(-100%); visibility: hidden; }
