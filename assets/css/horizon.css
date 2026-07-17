@@ -94,6 +94,9 @@ html {
   /* le flash gris du tap n'est pas de la maison : on le coupe et on répond
      nous-mêmes, à l'ovale, dans « Affinage tactile » plus bas. */
   -webkit-tap-highlight-color: transparent;
+  /* le verrou d'élasticité posé aussi sur la racine : selon le navigateur,
+     c'est html ou body qui porte le défilement — on couvre les deux. */
+  overscroll-behavior: none;
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
@@ -107,12 +110,14 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  /* La page est verrouillée sur l'axe horizontal : rien ne dépasse (overflow),
-     et aucun rebond élastique latéral n'est permis (overscroll). Le site ne
-     « part » plus à gauche ni à droite au doigt — il reste fixe. Le carrousel
-     du comptoir garde son propre défilement, contenu, sans entraîner la page. */
+  /* La page est verrouillée sur les deux axes : rien ne dépasse à l'horizontale
+     (overflow), et aucun rebond élastique — ni latéral ni vertical — n'est
+     permis (overscroll). Le site ne « part » plus au doigt, ni sur les côtés
+     ni en haut/bas : il reste fixe. Le défilement normal, lui, est intact ;
+     seul le caoutchouc des extrémités disparaît. Le carrousel du comptoir garde
+     son propre défilement, contenu, sans entraîner la page. */
   overflow-x: hidden;
-  overscroll-behavior-x: none;
+  overscroll-behavior: none;
 }
 
 img, svg { max-width: 100%; }
