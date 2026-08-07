@@ -3,5 +3,4 @@
 User-agent: *
 Allow: /
 Disallow: /404.html
-
 Sitemap: https://horizon-site-one.vercel.app/sitemap.xml
