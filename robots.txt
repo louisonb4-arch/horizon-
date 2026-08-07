@@ -1,8 +1,7 @@
 # Horizon par alaïa café — 38 rue Léon Jamin, 44000 Nantes
-# ⚠ Remplacer example.invalid par le domaine réel avant la mise en ligne.
 
 User-agent: *
 Allow: /
 Disallow: /404.html
 
-Sitemap: https://example.invalid/sitemap.xml
+Sitemap: https://horizon-site-one.vercel.app/sitemap.xml

@@ -181,7 +181,9 @@ Le compte doit rester à zéro.
 
 ## 6. À vérifier après la mise en ligne
 
-- [ ] `grep -rn "example.invalid" .` ne renvoie plus rien
+- [x] `grep -rn "example.invalid" .` ne renvoie plus rien
+      (remplacé le 2026-08-07 par https://horizon-site-one.vercel.app — **domaine temporaire Vercel**,
+       à rebasculer sur le domaine définitif dès qu'il est acheté)
 - [ ] `grep -rn "à fournir" *.html` ne renvoie plus rien
 - [ ] La page 404 est bien servie par l'hébergeur en HTTP 404 (et non en 200)
 - [ ] `robots.txt` et `sitemap.xml` pointent le vrai domaine
